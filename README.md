@@ -32,7 +32,8 @@ _niccikaufman@gmail.com_
 
 ## TDD
 
-- Game Start
-- ## Description: It can display inputted names of two players.
-- ## Input: Nicci, Not Nicci
-- ## Expected Output: Player 1 is Nicci. Player 2 is Not Nicci.
+Game Start
+- #### Description: It can display inputted names of two players.
+- #### Input:
+        Nicci, Not Nicci
+- #### Expected Output: "Player 1 is Nicci. Player 2 is Not Nicci."
