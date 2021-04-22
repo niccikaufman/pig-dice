@@ -31,9 +31,9 @@ _[MIT](https://en.wikipedia.org/wiki/MIT_License)_
 _niccikaufman@gmail.com_
 
 ## TDD
+        $(".start-game").on('click', (event) => {
 
-Game Start
-- #### Description: It can display inputted names of two players.
+- #### Description: Two players can enter their names which will be displayed when the start game button is clicked.
 - #### Input:
         Nicci, Not Nicci
 - #### Expected Output: "Player 1 is Nicci. Player 2 is Not Nicci."
