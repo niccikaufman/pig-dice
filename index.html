@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pig Dice</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="player-names" class="row">
+        <input type="text" id="player1-name" class="col-md-4" placeholder="Player One's Name">
+        <button type="submit" id="game-start" class="col-md-4 btn-dark">Start Game</button>
+        <input type="text" id="player2-name" class="col-md-4" placeholder="Player Two's Name">
+      </div>
+      <div class="row">
+        <div id="player1-area" class="col-md-6 card">
+          <p id="player1-name"></p>
+          <p id="player1-turnscore"></p>
+          <p id="player1-gamescore"></p>
+          <form class="col-md-12 card">
+            <button type="submit" name="Player 1" class="btn-roll btn-dark">Roll</button>
+            <br>
+            <button type="submit" name="Player 1" class="btn-hold btn-dark">Hold</button>
+          </form>
+        </div>
+        <div id="player2-area" class="col-md-6 card">
+          <p id="player2-name"></p>
+          <p id="player2-turnscore"></p>
+          <p id="player2-gamescore"></p>
+          <form class="col-md-12 card">
+            <button type="submit" name="Player 2" class="btn-roll btn-dark">Roll</button>
+            <br>
+            <button type="submit" name="Player 2" class="btn-hold btn-dark">Hold</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>  
+  </body>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+</html>
