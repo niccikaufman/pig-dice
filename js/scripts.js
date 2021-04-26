@@ -29,17 +29,14 @@ function checkNumber(rollResult) {
 
 //calculates current player game score
 function holdTurn() {
-
 }
 
 //switches to the other player
 function switchActivePlayer() {
-  
 }
 
 //checks if player game score is 100 and displays winner
 function winCondition(){
-
 }
 
 //front end logic
