@@ -18,26 +18,21 @@
       <div class="row">
         <div id="player1-area" class="col-md-6 card">
           <p id="player1-name"></p>
-          <p id="player1-turnscore"></p>
-          <p id="player1-gamescore"></p>
-          <form class="col-md-12 card">
-            <button type="submit" name="Player 1" class="btn-roll btn-dark">Roll</button>
-            <br>
-            <button type="submit" name="Player 1" class="btn-hold btn-dark">Hold</button>
-          </form>
+          <p>Turn Score: <span id="player1-turnscore"></span></p>
+          <p>Current Game Score: <span id="player1-gamescore"></span></p>
         </div>
         <div id="player2-area" class="col-md-6 card">
           <p id="player2-name"></p>
-          <p id="player2-turnscore"></p>
-          <p id="player2-gamescore"></p>
-          <form class="col-md-12 card">
-            <button type="submit" name="Player 2" class="btn-roll btn-dark">Roll</button>
-            <br>
-            <button type="submit" name="Player 2" class="btn-hold btn-dark">Hold</button>
-          </form>
+          <p>Turn Score: <span id="player2-turnscore"></span></p>
+          <p>Current Game Score: <span id="player2-gamescore"></span></p>
         </div>
+        <form class="col-md-12 card">
+          <button type="submit" name="Player 1" class="btn-roll btn-dark">Roll</button>
+          <br>
+          <button type="submit" name="Player 1" class="btn-hold btn-dark">Hold</button>
+        </form>
+        <div class="end-game"></div>
       </div>
-      
     </div>  
   </body>
   <script src="js/jquery-3.6.0.js"></script>
