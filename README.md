@@ -35,7 +35,7 @@ _niccikaufman@gmail.com_
 - _Input:_ Player1: Nicci, Player2: Kira
 - _Expected Output:_ Players: Nicci, Kira
 
-randomNumber()
+rollDice()
 - _Description:_ It can display a random number between 1 and 6 when the roll button is clicked
 - _Input:_ randomNumber();
 - _Expected Output:_ rollResult = 5;
@@ -45,10 +45,10 @@ diceRoll()
 - _Input:_ rollDice(); rollResult = 3; 
 - _Expected Output:_ turnScore = 3;
 
-numberEqualsOne()
-- _Description:_ Will check if the roll result equals 1
-- _Input:_ rollDice(); rollResult = 1; 
-- _Expected Output:_ "Sorry! Your turn has ended."
+checkNumber()
+_Description:_ Will check if the roll result equals 1 and determine turn score
+_Input:_ rollDice(); rollResult = 1; 
+_Expected Output:_ "Sorry! Your turn has ended."
 
 
 <!-- _Description:_ Player 1 can decide to roll again and the next roll result will be added to the turn score.
