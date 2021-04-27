@@ -50,7 +50,7 @@ _niccikaufman@gmail.com_
 - _Input:_ turnScore = 15; gameScore = 0;
 - _Expected Output:_ turnScore = 0; gameScore = 15;
 
-#### winCondition()
-- _Description:_ Will check player's game score and display a message if it is greater than or equal to 100
+#### checkForWin()
+- _Description:_ Will check player's current game score and display a message if it is greater than or equal to 100
 - _Input:_ gameScore = 103
 - _Expected Output:_ "Winner!"
