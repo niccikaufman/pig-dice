@@ -35,28 +35,22 @@ _niccikaufman@gmail.com_
 - _Input:_ Player1: Nicci, Player2: Kira
 - _Expected Output:_ Players: Nicci, Kira
 
-rollDice()
+#### rollDice()
 - _Description:_ It can display a random number between 1 and 6 when the roll button is clicked
 - _Input:_ randomNumber();
 - _Expected Output:_ rollResult = 5;
 
-diceRoll() 
-- _Description:_ Player 1 can roll the dice and the result is displayed as their turn score
-- _Input:_ rollDice(); rollResult = 3; 
-- _Expected Output:_ turnScore = 3;
+#### checkNumber()
+- _Description:_ Will check if the roll result equals 1 and determine turn score
+- _Input:_ rollDice(); rollResult = 1; 
+- _Expected Output:_ "Sorry! Your turn has ended."
 
-checkNumber()
-_Description:_ Will check if the roll result equals 1 and determine turn score
-_Input:_ rollDice(); rollResult = 1; 
-_Expected Output:_ "Sorry! Your turn has ended."
+#### endTurn()
+- _Description:_ Will add player's turn score to game score and clear turn score
+- _Input:_ turnScore = 15; gameScore = 0;
+- _Expected Output:_ turnScore = 0; gameScore = 15;
 
-
-<!-- _Description:_ Player 1 can decide to roll again and the next roll result will be added to the turn score.
-_Input:_ rollDice(); diceRollResult = 5; 
-_Expected Output:_ turnScore = 8;
-
-hold()
-_Description:_ Player 1 can decide to hold and their turn score will be added to their total score before triggering player 2's turn
-_Input:_ hold button is clicked
-_Expected Output:_ gameScore = 8; player1.active = false; player2.active = true; -->
-
+#### winCondition()
+- _Description:_ Will check player's game score and display a message if it is greater than or equal to 100
+- _Input:_ gameScore = 103
+- _Expected Output:_ "Winner!"
