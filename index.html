@@ -15,29 +15,31 @@
         <button type="submit" id="game-start" class="col-md-4 btn-dark">Start Game</button>
         <input type="text" id="player2-name" class="col-md-4" placeholder="Player Two's Name">
       </div>
-      <div class="flex-grid-thirds">
-        <div id="player1-area" class="card">
-          <p id="player1-name-display"></p>
-          <p class="row" id="player1-message"></p>
-          <p>Player 1 rolled a: <span id="player1-rollscore"></span></p>
-          <p>Current Turn Score: <span id="player1-turnscore"></span></p>
-          <p>Game Score: <span id="player1-gamescore"></span></p>
-            <button type="submit" name="Player 1" id="player1-roll" class="btn-roll btn-dark  btn-block">Roll</button>
-            <br>
-            <button type="submit" name="Player 1" id="player1-hold" class="btn-hold btn-dark btn-block">Hold</button>
+      <div id="game-area">
+        <div class="flex-grid-thirds">
+          <div id="player1-area" class="card">
+            <p id="player1-name-display"></p>
+            <p class="row" id="player1-message"></p>
+            <p>Player 1 rolled a: <span id="player1-rollscore"></span></p>
+            <p>Current Turn Score: <span id="player1-turnscore"></span></p>
+            <p>Game Score: <span id="player1-gamescore"></span></p>
+              <button type="submit" name="Player 1" id="player1-roll" class="btn-roll btn-dark  btn-block">Roll</button>
+              <br>
+              <button type="submit" name="Player 1" id="player1-hold" class="btn-hold btn-dark btn-block">Hold</button>
+          </div>
+          <div id="dice-display"></div>
+          <div id="player2-area" class="card">
+            <p id="player2-name-display"></p>
+            <p class="row" id="player2-message"></p>
+            <p>Player 2 rolled a: <span id="player2-rollscore"></span></p>
+            <p>Current Turn Score: <span id="player2-turnscore"></span></p>
+            <p>Game Score: <span id="player2-gamescore"></span></p>
+              <button type="submit" name="Player 2" id="player2-roll" class="btn-roll btn-dark btn-block">Roll</button>
+              <br>
+              <button type="submit" name="Player 2" id="player2-hold" class="btn-hold btn-dark btn-block">Hold</button>
+          </div>
+          <button id="new-game" class="btn-roll btn-dark btn-block">New Game</button>
         </div>
-        <div id="dice-display"></div>
-        <div id="player2-area" class="card">
-          <p id="player2-name-display"></p>
-          <p class="row" id="player2-message"></p>
-          <p>Player 2 rolled a: <span id="player2-rollscore"></span></p>
-          <p>Current Turn Score: <span id="player2-turnscore"></span></p>
-          <p>Game Score: <span id="player2-gamescore"></span></p>
-            <button type="submit" name="Player 2" id="player2-roll" class="btn-roll btn-dark btn-block">Roll</button>
-            <br>
-            <button type="submit" name="Player 2" id="player2-hold" class="btn-hold btn-dark btn-block">Hold</button>
-        </div>
-        <button id="new-game" class="btn-roll btn-dark btn-block">New Game</button>
       </div>
     </div>  
   </body>

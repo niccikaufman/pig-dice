@@ -83,10 +83,7 @@ $("button#game-start").click(function(event) {
   $("#player-names").hide();
   $("#player1-name-display").append($("#player1-name").val());
   $("#player2-name-display").append($("#player2-name").val());
-  $("#player1-area").show();
-  $("#player2-area").show();
-  $("#dice-display").show();
-  $("#new-game").hide();
+  $("#game-area").show();
   $('#player2-area').addClass('disableGamingArea');
   $('button#player2-roll').prop('disabled', true);
   $('button#player2-hold').prop('disabled', true);
