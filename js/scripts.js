@@ -95,7 +95,7 @@ $("button#player1-roll").click(function(event) {
   player1.rollDice();
   $("#player1-turnscore").text(player1.turnScore);
   $("#player1-rollscore").text(rollResult);
-  $("#dice-display").html("<img src='images/" + rollResult + ".jpg' class='img-responsive'>");
+  $("#dice-display").html("<img src='images/" + player1.rollResult + ".jpg' class='img-responsive'>");
 })
 
 $("button#player2-roll").click(function(event) {
@@ -103,7 +103,7 @@ $("button#player2-roll").click(function(event) {
   player2.rollDice();
   $("#player2-turnscore").text(player2.turnScore);
   $("#player2-rollscore").text(rollResult);
-  $("#dice-display").html("<img src='images/" + rollResult + ".jpg' class='img-responsive'>");
+  $("#dice-display").html("<img src='images/" + player2.rollResult + ".jpg' class='img-responsive'>");
 })
 
 //player end turn event listener
