@@ -32,10 +32,8 @@ body {
   font-weight: bold;
 }
 
-#player1-area,
-#player2-area,
 #new-game,
-#dice-display {
+#game-area {
   display: none;
 }
 
