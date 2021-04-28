@@ -1,82 +1,94 @@
 // back end logic
 let rollResult;
 
-let player1 = {
-  turnScore: 0,
-  gameScore: 0,
-  rollResult: 0,
-  rollDice() {
-    rollResult = Math.floor(Math.random() * 6) + 1;
-    this.checkNumber(rollResult);
-  },
-  checkNumber() {
-    if (rollResult === 1) {
-      this.turnScore = 0;
-      this.endTurn();
-    } else if (rollResult !== 1) {
-      this.turnScore += rollResult;
-    }
-  },
-  endTurn() {
-    this.gameScore += this.turnScore;
+class Player {
+  constructor(name) {
+    this.name = name;
     this.turnScore = 0;
-    this.checkForWin();
-  },
-  switchPlayer() {
-    $('#player2-area').removeClass('disableGamingArea');
-    $('#player1-area').addClass('disableGamingArea');
-    $('button#player1-roll').prop('disabled', true);
-    $('button#player1-hold').prop('disabled', true);
-    $('button#player2-roll').prop('disabled', false);
-    $('button#player2-hold').prop('disabled', false);
-  },
-  checkForWin() {
-    if (this.gameScore >= 100) {
-      endGame();
-    } else {
-      this.switchPlayer();
-    }
-  },
+    this.gameScore = 0;
+    this.rollResult = 0;
+  }
 }
 
-let player2 = {
-  turnScore: 0,
-  gameScore: 0,
-  rollResult: 0,
-  rollDice() {
-    rollResult = Math.floor(Math.random() * 6) + 1;
-    this.checkNumber(rollResult);
-  },
-  checkNumber() {
-    if (rollResult === 1) {
-      this.turnScore = 0;
-      this.endTurn();
-    } else if (rollResult !== 1) {
-      this.turnScore += rollResult;
-    }
-  },
-  endTurn() {
-    this.gameScore += this.turnScore;
-    this.turnScore = 0;
-    this.switchPlayer();
-    this.checkForWin();
-  },
-  switchPlayer() {
-    $('#player1-area').removeClass('disableGamingArea');
-    $('#player2-area').addClass('disableGamingArea');
-    $('button#player1-roll').prop('disabled', false);
-    $('button#player1-hold').prop('disabled', false);
-    $('button#player2-roll').prop('disabled', true);
-    $('button#player2-hold').prop('disabled', true);
-  },
-  checkForWin() {
-    if (this.gameScore >= 100) {
-      endGame();
-    } else {
-      this.switchPlayer();
-    }
-  },
-}
+let player1 = new Player();
+let player2 = new Player();
+
+// let player1 = {
+//   turnScore: 0,
+//   gameScore: 0,
+//   rollResult: 0,
+//   rollDice() {
+//     rollResult = Math.floor(Math.random() * 6) + 1;
+//     this.checkNumber(rollResult);
+//   },
+//   checkNumber() {
+//     if (rollResult === 1) {
+//       this.turnScore = 0;
+//       this.endTurn();
+//     } else if (rollResult !== 1) {
+//       this.turnScore += rollResult;
+//     }
+//   },
+//   endTurn() {
+//     this.gameScore += this.turnScore;
+//     this.turnScore = 0;
+//     this.checkForWin();
+//   },
+//   switchPlayer() {
+//     $('#player2-area').removeClass('disableGamingArea');
+//     $('#player1-area').addClass('disableGamingArea');
+//     $('button#player1-roll').prop('disabled', true);
+//     $('button#player1-hold').prop('disabled', true);
+//     $('button#player2-roll').prop('disabled', false);
+//     $('button#player2-hold').prop('disabled', false);
+//   },
+//   checkForWin() {
+//     if (this.gameScore >= 100) {
+//       endGame();
+//     } else {
+//       this.switchPlayer();
+//     }
+//   },
+// }
+
+// let player2 = {
+//   turnScore: 0,
+//   gameScore: 0,
+//   rollResult: 0,
+//   rollDice() {
+//     rollResult = Math.floor(Math.random() * 6) + 1;
+//     this.checkNumber(rollResult);
+//   },
+//   checkNumber() {
+//     if (rollResult === 1) {
+//       this.turnScore = 0;
+//       this.endTurn();
+//     } else if (rollResult !== 1) {
+//       this.turnScore += rollResult;
+//     }
+//   },
+//   endTurn() {
+//     this.gameScore += this.turnScore;
+//     this.turnScore = 0;
+//     this.switchPlayer();
+//     this.checkForWin();
+//   },
+//   switchPlayer() {
+//     $('#player1-area').removeClass('disableGamingArea');
+//     $('#player2-area').addClass('disableGamingArea');
+//     $('button#player1-roll').prop('disabled', false);
+//     $('button#player1-hold').prop('disabled', false);
+//     $('button#player2-roll').prop('disabled', true);
+//     $('button#player2-hold').prop('disabled', true);
+//   },
+//   checkForWin() {
+//     if (this.gameScore >= 100) {
+//       endGame();
+//     } else {
+//       this.switchPlayer();
+//     }
+//   },
+// }
 
 function clearScores(){
   player1.turnScore = 0;
