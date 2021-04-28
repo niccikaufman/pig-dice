@@ -96,7 +96,11 @@ $("button#game-start").click(function(event) {
   $("#player2-name-display").append($("#player2-name").val());
   $("#player1-area").show();
   $("#player2-area").show();
+  $("#dice-display").show();
   $("#new-game").hide();
+  $('#player2-area').addClass('disableGamingArea');
+  $('button#player2-roll').prop('disabled', true);
+  $('button#player2-hold').prop('disabled', true);
 })
 
 //player roll event listener
@@ -104,12 +108,16 @@ $("button#player1-roll").click(function(event) {
   event.preventDefault();
   player1.rollDice();
   $("#player1-turnscore").text(player1.turnScore);
+  $("#player1-rollscore").text(rollResult);
+  $("#dice-display").html("<img src='images/" + rollResult + ".jpg' class='img-responsive'>");
 })
 
 $("button#player2-roll").click(function(event) {
   event.preventDefault();
   player2.rollDice();
   $("#player2-turnscore").text(player2.turnScore);
+  $("#player2-rollscore").text(rollResult);
+  $("#dice-display").html("<img src='images/" + rollResult + ".jpg' class='img-responsive'>");
 })
 
 //player end turn event listener
@@ -118,6 +126,8 @@ $("button#player1-hold").click(function(event) {
   player1.endTurn();
   $("#player1-gamescore").text(player1.gameScore);
   $("#player1-turnscore").text("");
+  $("#player1-rollscore").text("");
+
 })
 
 $("button#player2-hold").click(function(event) {
@@ -125,6 +135,7 @@ $("button#player2-hold").click(function(event) {
   player2.endTurn();
   $("#player2-gamescore").text(player2.gameScore);
   $("#player2-turnscore").text("");
+  $("#player2-rollscore").text("");
 })
 
 $("button#new-game").click(function() {
