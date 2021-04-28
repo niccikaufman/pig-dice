@@ -142,10 +142,12 @@ $("button#new-game").click(function() {
   $("#player-names").show();
   $("input#player1-name").val("");
   $("input#player2-name").val("");
+  $("#new-game").hide();
 })
 
 function endGame() {
   clearScores();
   alert("Winner!");
   $("#new-game").show();
+  $("#dice-display").hide();
 }

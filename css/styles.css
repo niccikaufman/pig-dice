@@ -46,6 +46,11 @@ body {
   padding: 20px;
   margin: 5%;
 }
+#new-game {
+  width: 32%;
+  padding: 20px;
+  margin: 20% 30% 30% 30%;
+}
 
 #dice-display {
   background-color: #abd1c6;
